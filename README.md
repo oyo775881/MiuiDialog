@@ -4,7 +4,7 @@
 
     仿MIUI10对话框（界面，动画，功能）
     
-    支持对话框，输入框，对话列表框
+    支持对话框，输入框，列表对话框，进度对话框
 
 ## 使用
 
@@ -36,6 +36,10 @@
 > 列表框
 
 <img src="https://raw.githubusercontent.com/oyo775881/MiuiDialog/master/screenshot/03.png" width="250" height="auto"/>
+
+> 进度框
+
+<img src="https://raw.githubusercontent.com/oyo775881/MiuiDialog/master/screenshot/04.png" width="250" height="auto"/>
 
 ## 文档
 
@@ -72,6 +76,13 @@
         .setSelector(1)//选中项，不可大于数组
         .setListListener((position, content) -> Toast.makeText(MainActivity.this, "点击了选项:" + position + content, Toast.LENGTH_LONG).show())//点击列表项监听
         .setPositiveButton("取消", (position, content) -> Toast.makeText(MainActivity.this, "点击了取消:" + position + content, Toast.LENGTH_LONG).show())//按钮
+        .show()//显示
+
+> 进度框
+
+    new MiuiLoadDialog.Builder(this)
+        .setCancelable(false)//是否点击外部消失
+        .setContent("加载中")//内容
         .show()//显示
         
 ## Licenses
