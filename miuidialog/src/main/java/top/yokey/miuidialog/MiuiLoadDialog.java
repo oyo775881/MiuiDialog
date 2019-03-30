@@ -29,8 +29,12 @@ public class MiuiLoadDialog {
         this.content = content;
     }
 
+    public void dismiss() {
+        this.dialog.dismiss();
+    }
+
     public void show() {
-        dialog = dialog = new Dialog(context);
+        dialog = new Dialog(context);
         dialog.setContentView(R.layout.miui_load_dialog);
         dialog.setCancelable(cancelable);
         dialog.getWindow().getDecorView().setPadding(0, 0, 0, 0);

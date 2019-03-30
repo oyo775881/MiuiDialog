@@ -59,7 +59,7 @@ public class MiuiListDialog {
     }
 
     public void show() {
-        dialog = dialog = new Dialog(context);
+        dialog = new Dialog(context);
         dialog.setContentView(R.layout.miui_list_dialog);
         dialog.setCancelable(cancelable);
         dialog.getWindow().getDecorView().setPadding(0, 0, 0, 0);
