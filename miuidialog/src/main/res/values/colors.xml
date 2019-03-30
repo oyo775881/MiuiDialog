@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--suppress ALL -->
+
+<resources>
+
+    <color name="line">#DEDEDE</color>
+    <color name="title">#333333</color>
+    <color name="content">#555555</color>
+    <color name="opera">#F9F9F9</color>
+    <color name="operaPress">#D7D7D7</color>
+
+    <color name="blue">#2894FF</color>
+    <color name="white">#FFFFFF</color>
+
+</resources>
