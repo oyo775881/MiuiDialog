@@ -1,4 +1,4 @@
-# MiuiDialog [![](https://img.shields.io/badge/platform-android-brightgreen.svg)](https://developer.android.com/index.html)  [![API](https://img.shields.io/badge/API-16%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=14)  [![](https://jitpack.io/v/oyo775881/MiuiDialog.svg)](https://jitpack.io/#oyo775881/MiuiDialog) [![Gradle-5.2.1](https://img.shields.io/badge/Gradle-5.2.1-brightgreen.svg)](https://img.shields.io/badge/Gradle-5.2.1-brightgreen.svg)][![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+# MiuiDialog [![](https://img.shields.io/badge/platform-android-brightgreen.svg)](https://developer.android.com/index.html)  [![API](https://img.shields.io/badge/API-16%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=14)  [![](https://jitpack.io/v/oyo775881/MiuiDialog.svg)](https://jitpack.io/#oyo775881/MiuiDialog) [![Gradle-5.2.1](https://img.shields.io/badge/Gradle-5.2.1-brightgreen.svg)](https://img.shields.io/badge/Gradle-5.2.1-brightgreen.svg) [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 ## 简介
 
