@@ -82,11 +82,15 @@ public class MiuiListDialog {
         titleTextView.setText(title);
         positiveTextView.setText(positive);
         positiveTextView.setOnClickListener(view -> {
-            positiveListener.onClick(selector, list.get(selector));
+            if (positiveListener != null) {
+                positiveListener.onClick(selector, list.get(selector));
+            }
             dialog.dismiss();
         });
         miuiListAdapter.setOnItemClickListener((position, content) -> {
-            miuiListListener.onClick(position, content);
+            if (miuiListListener != null) {
+                miuiListListener.onClick(position, content);
+            }
             dialog.dismiss();
         });
         dialog.show();

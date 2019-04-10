@@ -85,12 +85,16 @@ public class MiuiInputDialog {
         contentEditText.setInputType(inputType);
         negativeTextView.setText(negative);
         negativeTextView.setOnClickListener(view -> {
-            negativeListener.onClick(contentEditText.getText().toString());
+            if (negativeListener != null) {
+                negativeListener.onClick(contentEditText.getText().toString());
+            }
             dialog.dismiss();
         });
         positiveTextView.setText(positive);
         positiveTextView.setOnClickListener(view -> {
-            positiveListener.onClick(contentEditText.getText().toString());
+            if (positiveListener != null) {
+                positiveListener.onClick(contentEditText.getText().toString());
+            }
             dialog.dismiss();
         });
         if (!TextUtils.isEmpty(content)) {

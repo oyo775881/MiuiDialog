@@ -76,12 +76,16 @@ public class MiuiQueryDialog {
         contentTextView.setText(content);
         negativeTextView.setText(negative);
         negativeTextView.setOnClickListener(view -> {
-            negativeListener.onClick(view);
+            if (negativeListener != null) {
+                negativeListener.onClick(view);
+            }
             dialog.dismiss();
         });
         positiveTextView.setText(positive);
         positiveTextView.setOnClickListener(view -> {
-            positiveListener.onClick(view);
+            if (positiveListener != null) {
+                positiveListener.onClick(view);
+            }
             dialog.dismiss();
         });
         dialog.show();
