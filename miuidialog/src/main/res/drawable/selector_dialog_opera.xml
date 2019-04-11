@@ -2,10 +2,16 @@
 
 <!--suppress ALL -->
 
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/operaPress">
 
-    <item android:drawable="@drawable/border_dialog_opera" android:state_pressed="false" />
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/opera" />
+            <corners
+                android:bottomLeftRadius="4dp"
+                android:bottomRightRadius="4dp" />
+        </shape>
+    </item>
 
-    <item android:drawable="@drawable/border_dialog_opera_press" android:state_pressed="true" />
-
-</selector>
+</ripple>
