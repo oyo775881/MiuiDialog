@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
 
     @Override
     public void onCreate(@Nullable Bundle bundle) {
+
         super.onCreate(bundle);
         setContentView(R.layout.activity_main);
         AppCompatButton miuiQueryDialogButton = findViewById(R.id.miuiQueryDialogButton);
@@ -59,6 +60,7 @@ public class MainActivity extends Activity {
                 .setContent("加载中请稍后")
                 .show()
         );
+
     }
 
 }

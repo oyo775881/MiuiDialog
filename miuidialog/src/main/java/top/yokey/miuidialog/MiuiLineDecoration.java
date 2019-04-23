@@ -25,6 +25,7 @@ public class MiuiLineDecoration extends RecyclerView.ItemDecoration {
 
     @Override
     public void getItemOffsets(Rect rect, View view, RecyclerView parent, RecyclerView.State state) {
+
         super.getItemOffsets(rect, view, parent, state);
         if (edag) {
             rect.bottom = height;
@@ -37,6 +38,7 @@ public class MiuiLineDecoration extends RecyclerView.ItemDecoration {
                 rect.bottom = 0;
             }
         }
+
     }
 
     @Override

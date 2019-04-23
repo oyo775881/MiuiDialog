@@ -85,8 +85,10 @@ public class MiuiListAdapter extends RecyclerView.Adapter<MiuiListAdapter.ViewHo
         private AppCompatTextView mainTextView;
 
         private ViewHolder(View view) {
+
             super(view);
             mainTextView = view.findViewById(R.id.mainTextView);
+
         }
 
     }
