@@ -21,10 +21,12 @@ public class MiuiListAdapter extends RecyclerView.Adapter<MiuiListAdapter.ViewHo
     private OnItemClickListener onItemClickListener;
 
     public MiuiListAdapter(Context context, int selector, ArrayList<String> arrayList) {
+
         this.context = context;
         this.selector = selector;
         this.arrayList = arrayList;
         this.onItemClickListener = null;
+
     }
 
     @Override
@@ -50,8 +52,10 @@ public class MiuiListAdapter extends RecyclerView.Adapter<MiuiListAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup group, int viewType) {
+
         View view = LayoutInflater.from(group.getContext()).inflate(R.layout.miui_item_list, group, false);
         return new ViewHolder(view);
+
     }
 
     @Override

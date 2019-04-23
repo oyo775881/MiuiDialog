@@ -18,22 +18,31 @@ public class MiuiLoadDialog {
     private String content;
 
     public MiuiLoadDialog(Context context) {
+
         this.context = context;
+
     }
 
     public void setCancelable(boolean cancelable) {
+
         this.cancelable = cancelable;
+
     }
 
     public void setContent(String content) {
+
         this.content = content;
+
     }
 
     public void dismiss() {
+
         this.dialog.dismiss();
+
     }
 
     public void show() {
+
         dialog = new Dialog(context);
         dialog.setContentView(R.layout.miui_load_dialog);
         dialog.setCancelable(cancelable);
@@ -49,6 +58,7 @@ public class MiuiLoadDialog {
         AppCompatTextView contentTextView = dialog.findViewById(R.id.contentTextView);
         contentTextView.setText(content);
         dialog.show();
+
     }
 
     public static class Builder {
@@ -58,30 +68,40 @@ public class MiuiLoadDialog {
         private String content = "";
 
         public Builder(Context context) {
+
             this.context = context;
+
         }
 
         public Builder setCancelable(boolean cancelable) {
+
             this.cancelable = cancelable;
             return this;
+
         }
 
         public Builder setContent(int resId) {
+
             this.content = context.getString(resId);
             return this;
+
         }
 
         public Builder setContent(String content) {
+
             this.content = content;
             return this;
+
         }
 
         public MiuiLoadDialog show() {
+
             MiuiLoadDialog miuiLoadDialog = new MiuiLoadDialog(context);
             miuiLoadDialog.setCancelable(cancelable);
             miuiLoadDialog.setContent(content);
             miuiLoadDialog.show();
             return miuiLoadDialog;
+
         }
 
     }

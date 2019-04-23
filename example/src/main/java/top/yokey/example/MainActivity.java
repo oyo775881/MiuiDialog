@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
+
 import top.yokey.miuidialog.MiuiInputDialog;
 import top.yokey.miuidialog.MiuiListDialog;
 import top.yokey.miuidialog.MiuiLoadDialog;
@@ -53,7 +54,7 @@ public class MainActivity extends Activity {
                 .setPositiveButton("取消", (position, content) -> Toast.makeText(MainActivity.this, "点击了取消:" + position + content, Toast.LENGTH_LONG).show())
                 .show()
         );
-        miuiLoadDialogButton.setOnClickListener(view->new MiuiLoadDialog.Builder(this)
+        miuiLoadDialogButton.setOnClickListener(view -> new MiuiLoadDialog.Builder(this)
                 .setCancelable(false)
                 .setContent("加载中请稍后")
                 .show()

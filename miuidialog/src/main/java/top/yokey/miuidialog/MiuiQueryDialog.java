@@ -24,38 +24,55 @@ public class MiuiQueryDialog {
     private View.OnClickListener positiveListener;
 
     public MiuiQueryDialog(Context context) {
+
         this.context = context;
+
     }
 
     public void setCancelable(boolean cancelable) {
+
         this.cancelable = cancelable;
+
     }
 
     public void setTitle(String title) {
+
         this.title = title;
+
     }
 
     public void setContent(String content) {
+
         this.content = content;
+
     }
 
     public void setNegative(String negative) {
+
         this.negative = negative;
+
     }
 
     public void setNegativeListener(View.OnClickListener negativeListener) {
+
         this.negativeListener = negativeListener;
+
     }
 
     public void setPositive(String positive) {
+
         this.positive = positive;
+
     }
 
     public void setPositiveListener(View.OnClickListener positiveListener) {
+
         this.positiveListener = positiveListener;
+
     }
 
     public void show() {
+
         dialog = new Dialog(context);
         dialog.setContentView(R.layout.miui_query_dialog);
         dialog.setCancelable(cancelable);
@@ -89,6 +106,7 @@ public class MiuiQueryDialog {
             dialog.dismiss();
         });
         dialog.show();
+
     }
 
     public static class Builder {
@@ -103,59 +121,80 @@ public class MiuiQueryDialog {
         private View.OnClickListener positiveListener = null;
 
         public Builder(Context context) {
+
             this.context = context;
+
         }
 
         public Builder setCancelable(boolean cancelable) {
+
             this.cancelable = cancelable;
             return this;
+
         }
 
         public Builder setTitle(int resId) {
+
             this.title = context.getString(resId);
             return this;
+
         }
 
         public Builder setTitle(String title) {
+
             this.title = title;
             return this;
+
         }
 
         public Builder setContent(int resId) {
+
             this.content = context.getString(resId);
             return this;
+
         }
 
         public Builder setContent(String content) {
+
             this.content = content;
             return this;
+
         }
 
         public Builder setNegativeButton(int resId, View.OnClickListener negativeListener) {
+
             this.negative = context.getString(resId);
             this.negativeListener = negativeListener;
             return this;
+
         }
 
         public Builder setNegativeButton(String negative, View.OnClickListener negativeListener) {
+
             this.negative = negative;
             this.negativeListener = negativeListener;
             return this;
+
         }
 
         public Builder setPositiveButton(int resId, View.OnClickListener positiveListener) {
+
             this.positive = context.getString(resId);
             this.positiveListener = positiveListener;
             return this;
+
         }
 
         public Builder setPositiveButton(String positive, View.OnClickListener positiveListener) {
+
             this.positive = positive;
             this.positiveListener = positiveListener;
             return this;
+
         }
 
         public MiuiQueryDialog show() {
+
             MiuiQueryDialog miuiQueryDialog = new MiuiQueryDialog(context);
             miuiQueryDialog.setCancelable(cancelable);
             miuiQueryDialog.setTitle(title);
@@ -166,6 +205,7 @@ public class MiuiQueryDialog {
             miuiQueryDialog.setPositiveListener(positiveListener);
             miuiQueryDialog.show();
             return miuiQueryDialog;
+
         }
 
     }

@@ -15,10 +15,12 @@ public class MiuiLineDecoration extends RecyclerView.ItemDecoration {
     private boolean edag;
 
     public MiuiLineDecoration(int height, int color, boolean edag) {
+
         this.height = height;
         this.paint = new Paint();
         this.edag = edag;
         paint.setColor(color);
+
     }
 
     @Override
@@ -39,6 +41,7 @@ public class MiuiLineDecoration extends RecyclerView.ItemDecoration {
 
     @Override
     public void onDraw(Canvas canvas, RecyclerView parent, RecyclerView.State state) {
+
         int count = parent.getChildCount();
         int left = parent.getPaddingLeft();
         int right = parent.getWidth() - parent.getPaddingRight();
@@ -48,6 +51,7 @@ public class MiuiLineDecoration extends RecyclerView.ItemDecoration {
             float bottom = view.getBottom() + height;
             canvas.drawRect(left, top, right, bottom, paint);
         }
+
     }
 
 }

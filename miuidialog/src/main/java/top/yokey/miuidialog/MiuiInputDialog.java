@@ -29,42 +29,61 @@ public class MiuiInputDialog {
     private MiuiInputListener positiveListener;
 
     public MiuiInputDialog(Context context) {
+
         this.context = context;
+
     }
 
     public void setCancelable(boolean cancelable) {
+
         this.cancelable = cancelable;
+
     }
 
     public void setTitle(String title) {
+
         this.title = title;
+
     }
 
     public void setContent(String content) {
+
         this.content = content;
+
     }
 
     public void setInputType(int inputType) {
+
         this.inputType = inputType;
+
     }
 
     public void setNegative(String negative) {
+
         this.negative = negative;
+
     }
 
     public void setNegativeListener(MiuiInputListener negativeListener) {
+
         this.negativeListener = negativeListener;
+
     }
 
     public void setPositive(String positive) {
+
         this.positive = positive;
+
     }
 
     public void setPositiveListener(MiuiInputListener positiveListener) {
+
         this.positiveListener = positiveListener;
+
     }
 
     public void show() {
+
         dialog = new Dialog(context);
         dialog.setContentView(R.layout.miui_input_dialog);
         dialog.setCancelable(cancelable);
@@ -112,6 +131,7 @@ public class MiuiInputDialog {
             }
         });
         dialog.show();
+
     }
 
     public static class Builder {
@@ -127,64 +147,87 @@ public class MiuiInputDialog {
         private MiuiInputListener positiveListener = null;
 
         public Builder(Context context) {
+
             this.context = context;
+
         }
 
         public Builder setCancelable(boolean cancelable) {
+
             this.cancelable = cancelable;
             return this;
+
         }
 
         public Builder setTitle(int resId) {
+
             this.title = context.getString(resId);
             return this;
+
         }
 
         public Builder setTitle(String title) {
+
             this.title = title;
             return this;
+
         }
 
         public Builder setContent(int resId) {
+
             this.content = context.getString(resId);
             return this;
+
         }
 
         public Builder setContent(String content) {
+
             this.content = content;
             return this;
+
         }
 
         public Builder setInputType(int inputType) {
+
             this.inputType = inputType;
             return this;
+
         }
 
         public Builder setNegativeButton(int resId, MiuiInputListener negativeListener) {
+
             this.negative = context.getString(resId);
             this.negativeListener = negativeListener;
             return this;
+
         }
 
         public Builder setNegativeButton(String negative, MiuiInputListener negativeListener) {
+
             this.negative = negative;
             this.negativeListener = negativeListener;
             return this;
+
         }
 
         public Builder setPositiveButton(int resId, MiuiInputListener positiveListener) {
+
             this.positive = context.getString(resId);
             this.positiveListener = positiveListener;
             return this;
+
         }
 
         public Builder setPositiveButton(String positive, MiuiInputListener positiveListener) {
+
             this.positive = positive;
             this.positiveListener = positiveListener;
             return this;
+
         }
 
         public MiuiInputDialog show() {
+
             MiuiInputDialog miuiInputDialog = new MiuiInputDialog(context);
             miuiInputDialog.setCancelable(cancelable);
             miuiInputDialog.setTitle(title);
@@ -196,6 +239,7 @@ public class MiuiInputDialog {
             miuiInputDialog.setPositiveListener(positiveListener);
             miuiInputDialog.show();
             return miuiInputDialog;
+
         }
 
     }

@@ -27,38 +27,55 @@ public class MiuiListDialog {
     private MiuiListListener positiveListener;
 
     public MiuiListDialog(Context context) {
+
         this.context = context;
+
     }
 
     public void setCancelable(boolean cancelable) {
+
         this.cancelable = cancelable;
+
     }
 
     public void setTitle(String title) {
+
         this.title = title;
+
     }
 
     public void setList(ArrayList<String> list) {
+
         this.list = list;
+
     }
 
     public void setSelector(int selector) {
+
         this.selector = selector;
+
     }
 
     public void setMiuiListListener(MiuiListListener miuiListListener) {
+
         this.miuiListListener = miuiListListener;
+
     }
 
     public void setPositive(String positive) {
+
         this.positive = positive;
+
     }
 
     public void setPositiveListener(MiuiListListener positiveListener) {
+
         this.positiveListener = positiveListener;
+
     }
 
     public void show() {
+
         dialog = new Dialog(context);
         dialog.setContentView(R.layout.miui_list_dialog);
         dialog.setCancelable(cancelable);
@@ -94,6 +111,7 @@ public class MiuiListDialog {
             dialog.dismiss();
         });
         dialog.show();
+
     }
 
     public static class Builder {
@@ -108,52 +126,71 @@ public class MiuiListDialog {
         private MiuiListListener positiveListener = null;
 
         public Builder(Context context) {
+
             this.context = context;
+
         }
 
         public Builder setCancelable(boolean cancelable) {
+
             this.cancelable = cancelable;
             return this;
+
         }
 
         public Builder setTitle(int resId) {
+
             this.title = context.getString(resId);
             return this;
+
         }
 
         public Builder setTitle(String title) {
+
             this.title = title;
             return this;
+
         }
 
         public Builder setList(ArrayList<String> list) {
+
             this.list = list;
             return this;
+
         }
 
         public Builder setSelector(int selector) {
+
             this.selector = selector;
             return this;
+
         }
 
         public Builder setListListener(MiuiListListener miuiListListener) {
+
             this.miuiListListener = miuiListListener;
             return this;
+
         }
 
         public Builder setPositiveButton(int resId, MiuiListListener positiveListener) {
+
             this.positive = context.getString(resId);
             this.positiveListener = positiveListener;
             return this;
+
         }
 
         public Builder setPositiveButton(String positive, MiuiListListener positiveListener) {
+
             this.positive = positive;
             this.positiveListener = positiveListener;
             return this;
+
         }
 
         public MiuiListDialog show() {
+
             MiuiListDialog miuiListDialog = new MiuiListDialog(context);
             miuiListDialog.setCancelable(cancelable);
             miuiListDialog.setTitle(title);
@@ -164,6 +201,7 @@ public class MiuiListDialog {
             miuiListDialog.setPositiveListener(positiveListener);
             miuiListDialog.show();
             return miuiListDialog;
+
         }
 
     }
