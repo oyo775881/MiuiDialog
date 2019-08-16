@@ -2,6 +2,7 @@ package top.yokey.miuidialog;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,8 +38,15 @@ public class MiuiListAdapter extends RecyclerView.Adapter<MiuiListAdapter.ViewHo
         holder.mainTextView.setCompoundDrawablesRelativeWithIntrinsicBounds(context.getDrawable(R.drawable.ic_miui_arrow_empty), null, null, null);
         holder.mainTextView.setTextColor(context.getColor(R.color.title));
         if (selector == position) {
-            holder.mainTextView.setCompoundDrawablesRelativeWithIntrinsicBounds(context.getDrawable(R.drawable.ic_miui_arrow_right), null, null, null);
+            Drawable drawable = context.getDrawable(R.drawable.ic_miui_arrow_right);
+            if (MiuiDialogHelper.get().getListArrow() != 0) {
+                drawable = context.getDrawable(MiuiDialogHelper.get().getListArrow());
+            }
+            holder.mainTextView.setCompoundDrawablesRelativeWithIntrinsicBounds(drawable, null, null, null);
             holder.mainTextView.setTextColor(context.getColor(R.color.blue));
+            if (MiuiDialogHelper.get().getAccentColor() != 0) {
+                holder.mainTextView.setTextColor(context.getColor(MiuiDialogHelper.get().getAccentColor()));
+            }
         }
         holder.mainTextView.setText(content);
         holder.mainTextView.setOnClickListener(view -> {

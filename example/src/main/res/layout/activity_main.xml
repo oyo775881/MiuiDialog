@@ -20,6 +20,17 @@
         android:text="MiuiQueryDialog" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/miuiMutilInputDialogButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:drawable/btn_default"
+        android:gravity="center"
+        android:text="MiuiMutilInputDialog" />
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/miuiInputDialogButton"
         android:layout_width="match_parent"
         android:layout_height="48dp"

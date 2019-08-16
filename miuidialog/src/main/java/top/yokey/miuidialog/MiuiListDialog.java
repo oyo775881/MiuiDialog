@@ -97,6 +97,9 @@ public class MiuiListDialog {
         recyclerView.setNestedScrollingEnabled(false);
         AppCompatTextView positiveTextView = dialog.findViewById(R.id.positiveTextView);
         titleTextView.setText(title);
+        if (MiuiDialogHelper.get().getPositiveColor() != 0) {
+            positiveTextView.setTextColor(context.getColor(MiuiDialogHelper.get().getPositiveColor()));
+        }
         positiveTextView.setText(positive);
         positiveTextView.setOnClickListener(view -> {
             if (positiveListener != null) {

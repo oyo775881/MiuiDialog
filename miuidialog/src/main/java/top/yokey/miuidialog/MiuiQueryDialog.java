@@ -91,6 +91,9 @@ public class MiuiQueryDialog {
         AppCompatTextView positiveTextView = dialog.findViewById(R.id.positiveTextView);
         titleTextView.setText(title);
         contentTextView.setText(content);
+        if (MiuiDialogHelper.get().getNegativeColor() != 0) {
+            negativeTextView.setTextColor(context.getColor(MiuiDialogHelper.get().getNegativeColor()));
+        }
         negativeTextView.setText(negative);
         negativeTextView.setOnClickListener(view -> {
             if (negativeListener != null) {
@@ -98,6 +101,9 @@ public class MiuiQueryDialog {
             }
             dialog.dismiss();
         });
+        if (MiuiDialogHelper.get().getPositiveColor() != 0) {
+            positiveTextView.setTextColor(context.getColor(MiuiDialogHelper.get().getPositiveColor()));
+        }
         positiveTextView.setText(positive);
         positiveTextView.setOnClickListener(view -> {
             if (positiveListener != null) {

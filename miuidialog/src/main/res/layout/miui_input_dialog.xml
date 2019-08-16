@@ -31,8 +31,8 @@
         android:layout_marginBottom="32dp"
         android:background="@drawable/border_dialog_input_edit"
         android:gravity="center_vertical"
-        android:maxLength="255"
-        android:maxLines="24"
+        android:maxLength="1024"
+        android:maxLines="1"
         android:padding="12dp"
         android:textColor="@color/content"
         android:textSize="14sp" />

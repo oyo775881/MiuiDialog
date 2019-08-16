@@ -9,6 +9,8 @@ import android.view.WindowManager;
 
 import androidx.appcompat.widget.AppCompatTextView;
 
+import com.github.ybq.android.spinkit.SpinKitView;
+
 @SuppressWarnings("ALL")
 public class MiuiLoadDialog {
 
@@ -55,6 +57,10 @@ public class MiuiLoadDialog {
         layoutParams.width = (int) (displayMetrics.widthPixels * 1);
         window.setAttributes(layoutParams);
         window.setWindowAnimations(R.style.Dialog_Miui);
+        SpinKitView spinKitView = dialog.findViewById(R.id.mainSpinKitView);
+        if (MiuiDialogHelper.get().getAccentColor() != 0) {
+            spinKitView.setColor(context.getColor(MiuiDialogHelper.get().getAccentColor()));
+        }
         AppCompatTextView contentTextView = dialog.findViewById(R.id.contentTextView);
         contentTextView.setText(content);
         dialog.show();

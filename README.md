@@ -4,7 +4,7 @@
 
     仿MIUI10对话框（界面，动画，功能）
     
-    支持对话框，输入框，列表对话框，进度对话框
+    支持对话框，输入框，多行输入框，列表对话框，进度对话框
 
 ## 使用
 
@@ -22,6 +22,13 @@
 	dependencies {
 	       implementation 'com.github.oyo775881:MiuiDialog:+'
 	}
+
+> Step 3. 设置各个按钮颜色（如不设置，则使用默认色）
+
+    MiuiDialogHelper.get().setAccentColor(R.color.title);//主色
+    MiuiDialogHelper.get().setNegativeColor(R.color.title);//取消按钮颜色
+    MiuiDialogHelper.get().setPositiveColor(R.color.title);//确认按钮颜色
+    MiuiDialogHelper.get().setListArrow(R.drawable.ic_miui_arrow_right);//列表选中箭头
 	
 ## 效果
 
@@ -60,6 +67,16 @@
         .setTitle("MIUI输入框")//标题
         .setContent("MIUI输入框")//内容
         .setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD)//输入类型
+        .setNegativeButton("取消", content -> Toast.makeText(MainActivity.this, "点击了取消:" + content, Toast.LENGTH_LONG).show())//左边的按钮
+        .setPositiveButton("确认", content -> Toast.makeText(MainActivity.this, "点击了确认:" + content, Toast.LENGTH_LONG).show())//右边的按钮
+        .show()
+
+> 多行输入框
+
+    new MiuiMutilInputDialog.Builder(this)
+        .setCancelable(false)//是否点击外部消失
+        .setTitle("MIUI输入框")//标题
+        .setContent("MIUI输入框")//内容
         .setNegativeButton("取消", content -> Toast.makeText(MainActivity.this, "点击了取消:" + content, Toast.LENGTH_LONG).show())//左边的按钮
         .setPositiveButton("确认", content -> Toast.makeText(MainActivity.this, "点击了确认:" + content, Toast.LENGTH_LONG).show())//右边的按钮
         .show()
