@@ -91,7 +91,7 @@ public class MiuiInputDialog {
         Window window = dialog.getWindow();
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
         WindowManager.LayoutParams layoutParams = window.getAttributes();
-        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        window.setBackgroundDrawableResource(android.R.color.transparent);
         window.setGravity(Gravity.CENTER | Gravity.BOTTOM);
         layoutParams.width = (int) (displayMetrics.widthPixels * 1);
         window.setAttributes(layoutParams);
@@ -104,7 +104,7 @@ public class MiuiInputDialog {
         contentEditText.setInputType(inputType);
         negativeTextView.setText(negative);
         if (MiuiDialogHelper.get().getNegativeColor() != 0) {
-            negativeTextView.setTextColor(context.getColor(MiuiDialogHelper.get().getNegativeColor()));
+            negativeTextView.setTextColor(context.getResources().getColor(MiuiDialogHelper.get().getNegativeColor()));
         }
         negativeTextView.setOnClickListener(view -> {
             if (negativeListener != null) {
@@ -113,7 +113,7 @@ public class MiuiInputDialog {
             dialog.dismiss();
         });
         if (MiuiDialogHelper.get().getPositiveColor() != 0) {
-            positiveTextView.setTextColor(context.getColor(MiuiDialogHelper.get().getPositiveColor()));
+            positiveTextView.setTextColor(context.getResources().getColor(MiuiDialogHelper.get().getPositiveColor()));
         }
         positiveTextView.setText(positive);
         positiveTextView.setOnClickListener(view -> {

@@ -1,7 +1,6 @@
 package top.yokey.example;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputType;
 import android.widget.Toast;
@@ -78,12 +77,6 @@ public class MainActivity extends Activity {
                 .setContent("加载中请稍后")
                 .show()
         );
-
-    }
-
-    public int getColors(int id) {
-
-        return getResources().getColor(id);
 
     }
 

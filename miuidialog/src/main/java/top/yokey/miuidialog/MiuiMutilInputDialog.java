@@ -96,7 +96,7 @@ public class MiuiMutilInputDialog {
         contentEditText.setText(content);
         negativeTextView.setText(negative);
         if (MiuiDialogHelper.get().getNegativeColor() != 0) {
-            negativeTextView.setTextColor(context.getColor(MiuiDialogHelper.get().getNegativeColor()));
+            negativeTextView.setTextColor(context.getResources().getColor(MiuiDialogHelper.get().getNegativeColor()));
         }
         negativeTextView.setOnClickListener(view -> {
             if (negativeListener != null) {
@@ -105,7 +105,7 @@ public class MiuiMutilInputDialog {
             dialog.dismiss();
         });
         if (MiuiDialogHelper.get().getPositiveColor() != 0) {
-            positiveTextView.setTextColor(context.getColor(MiuiDialogHelper.get().getPositiveColor()));
+            positiveTextView.setTextColor(context.getResources().getColor(MiuiDialogHelper.get().getPositiveColor()));
         }
         positiveTextView.setText(positive);
         positiveTextView.setOnClickListener(view -> {

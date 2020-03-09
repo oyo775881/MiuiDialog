@@ -74,18 +74,17 @@ public class MiuiQueryDialog {
     public void show() {
 
         dialog = new Dialog(context);
-        dialog.setContentView(R.layout.miui_query_dialog); //设置布局文件
-        dialog.setCancelable(cancelable);//设置是否可以点击外部消失
-        dialog.getWindow().getDecorView().setPadding(0, 0, 0, 0);//设置与父窗口之间的内间距
-        Window window = dialog.getWindow();//获取dialog他的window对象
-        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();//获取显示的一些属性元素
-        WindowManager.LayoutParams layoutParams = window.getAttributes();//从window获取一些属性
-        window.setBackgroundDrawableResource(android.R.color.transparent);//设置对话框的背景色
-        window.setGravity(Gravity.CENTER | Gravity.BOTTOM);//设置对话框的位置
-        layoutParams.width = (int) (displayMetrics.widthPixels * 1);//设置对话框的宽度
-        window.setAttributes(layoutParams);//为对话框设置好属性
-        window.setWindowAnimations(R.style.Dialog_Miui);//设置对话框的弹出动画
-        //这部分代码去实例化控件
+        dialog.setContentView(R.layout.miui_query_dialog);
+        dialog.setCancelable(cancelable);
+        dialog.getWindow().getDecorView().setPadding(0, 0, 0, 0);
+        Window window = dialog.getWindow();
+        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+        WindowManager.LayoutParams layoutParams = window.getAttributes();
+        window.setBackgroundDrawableResource(android.R.color.transparent);
+        window.setGravity(Gravity.CENTER | Gravity.BOTTOM);
+        layoutParams.width = (int) (displayMetrics.widthPixels * 1);
+        window.setAttributes(layoutParams);
+        window.setWindowAnimations(R.style.Dialog_Miui);
         AppCompatTextView titleTextView = dialog.findViewById(R.id.titleTextView);
         AppCompatTextView contentTextView = dialog.findViewById(R.id.contentTextView);
         AppCompatTextView negativeTextView = dialog.findViewById(R.id.negativeTextView);

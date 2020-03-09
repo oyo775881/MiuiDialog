@@ -35,7 +35,7 @@
         android:maxLength="4096"
         android:maxLines="255"
         android:minHeight="64dp"
-        android:padding="12dp"
+        android:padding="16dp"
         android:textColor="@color/content"
         android:textSize="14sp" />
 

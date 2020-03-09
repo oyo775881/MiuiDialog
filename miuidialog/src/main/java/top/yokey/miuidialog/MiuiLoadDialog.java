@@ -52,14 +52,14 @@ public class MiuiLoadDialog {
         Window window = dialog.getWindow();
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
         WindowManager.LayoutParams layoutParams = window.getAttributes();
-        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        window.setBackgroundDrawableResource(android.R.color.transparent);
         window.setGravity(Gravity.CENTER | Gravity.BOTTOM);
         layoutParams.width = (int) (displayMetrics.widthPixels * 1);
         window.setAttributes(layoutParams);
         window.setWindowAnimations(R.style.Dialog_Miui);
         SpinKitView spinKitView = dialog.findViewById(R.id.mainSpinKitView);
         if (MiuiDialogHelper.get().getAccentColor() != 0) {
-            spinKitView.setColor(context.getColor(MiuiDialogHelper.get().getAccentColor()));
+            spinKitView.setColor(context.getResources().getColor(MiuiDialogHelper.get().getAccentColor()));
         }
         AppCompatTextView contentTextView = dialog.findViewById(R.id.contentTextView);
         contentTextView.setText(content);

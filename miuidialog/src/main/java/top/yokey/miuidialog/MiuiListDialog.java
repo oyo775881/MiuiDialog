@@ -83,7 +83,7 @@ public class MiuiListDialog {
         Window window = dialog.getWindow();
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
         WindowManager.LayoutParams layoutParams = window.getAttributes();
-        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        window.setBackgroundDrawableResource(android.R.color.transparent);
         window.setGravity(Gravity.CENTER | Gravity.BOTTOM);
         layoutParams.width = (int) (displayMetrics.widthPixels * 1);
         window.setAttributes(layoutParams);
@@ -93,12 +93,12 @@ public class MiuiListDialog {
         MiuiListAdapter miuiListAdapter = new MiuiListAdapter(context, selector, list);
         recyclerView.setAdapter(miuiListAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        recyclerView.addItemDecoration(new MiuiLineDecoration(1, context.getColor(R.color.line), false));
+        recyclerView.addItemDecoration(new MiuiLineDecoration(1, context.getResources().getColor(R.color.line), false));
         recyclerView.setNestedScrollingEnabled(false);
         AppCompatTextView positiveTextView = dialog.findViewById(R.id.positiveTextView);
         titleTextView.setText(title);
         if (MiuiDialogHelper.get().getPositiveColor() != 0) {
-            positiveTextView.setTextColor(context.getColor(MiuiDialogHelper.get().getPositiveColor()));
+            positiveTextView.setTextColor(context.getResources().getColor(MiuiDialogHelper.get().getPositiveColor()));
         }
         positiveTextView.setText(positive);
         positiveTextView.setOnClickListener(view -> {
