@@ -81,4 +81,10 @@ public class MainActivity extends Activity {
 
     }
 
+    public int getColors(int id) {
+
+        return getResources().getColor(id);
+
+    }
+
 }
