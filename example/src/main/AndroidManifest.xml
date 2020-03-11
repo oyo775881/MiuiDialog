@@ -8,6 +8,7 @@
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="MiuiDialog"
+        android:theme="@style/Theme.Main"
         android:usesCleartextTraffic="true">
 
         <activity

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--suppress ALL -->
+
+<resources>
+
+    <color name="accent">#956F4F</color>
+    <color name="accentDark">#795437</color>
+    <color name="primary">#FFFFFF</color>
+    <color name="primaryDark">#F3F3F3</color>
+    <color name="text">#212121</color>
+    <color name="textTwo">#757575</color>
+    <color name="textThr">#B9B9B9</color>
+    <color name="divider">#EEEEEE</color>
+
+    <color name="red">#EE0000</color>
+    <color name="redDark">#DD0000</color>
+    <color name="yellow">#FF7100</color>
+    <color name="yellowDark">#FF8000</color>
+
+    <color name="boy">#57A8F2</color>
+    <color name="girl">#FBA69D</color>
+    <color name="wap">#F8F8F8</color>
+    <color name="black">#000000</color>
+    <color name="backgroundCommon">#33000000</color>
+    <color name="backgroundCommonAdd">#66000000</color>
+    <color name="transparent">@android:color/transparent</color>
+
+</resources>

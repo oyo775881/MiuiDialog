@@ -10,57 +10,27 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/miuiQueryDialogButton"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@android:drawable/btn_default"
-        android:gravity="center"
+        style="@style/Button.Normal"
         android:text="MiuiQueryDialog" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/miuiMutilInputDialogButton"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@android:drawable/btn_default"
-        android:gravity="center"
+        style="@style/Button.Normal"
         android:text="MiuiMutilInputDialog" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/miuiInputDialogButton"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@android:drawable/btn_default"
-        android:gravity="center"
+        style="@style/Button.Normal"
         android:text="MiuiInputDialog" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/miuiListDialogButton"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@android:drawable/btn_default"
-        android:gravity="center"
+        style="@style/Button.Normal"
         android:text="MiuiListDialog" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/miuiLoadDialogButton"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@android:drawable/btn_default"
-        android:gravity="center"
+        style="@style/Button.Normal"
         android:text="MiuiLoadDialog" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
