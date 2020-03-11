@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--suppress ALL -->
+
+<resources>
+
+    <string name="query">这是一个询问对话框</string>
+    <string name="mutil">This is mutil dialog</string>
+
+</resources>

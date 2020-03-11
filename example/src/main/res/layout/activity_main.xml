@@ -11,12 +11,12 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/miuiQueryDialogButton"
         style="@style/Button.Normal"
-        android:text="MiuiQueryDialog" />
+        android:text="@string/query" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/miuiMutilInputDialogButton"
         style="@style/Button.Normal"
-        android:text="MiuiMutilInputDialog" />
+        android:text="@string/mutil" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/miuiInputDialogButton"
