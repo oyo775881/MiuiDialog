@@ -13,4 +13,5 @@
     android:paddingStart="14dp"
     android:paddingEnd="16dp"
     android:textColor="@color/blue"
-    android:textSize="16sp" />
+    android:textSize="16sp"
+    android:textStyle="bold" />

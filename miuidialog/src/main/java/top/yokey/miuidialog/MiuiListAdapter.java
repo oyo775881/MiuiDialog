@@ -36,16 +36,16 @@ public class MiuiListAdapter extends RecyclerView.Adapter<MiuiListAdapter.ViewHo
 
         String content = arrayList.get(position);
         holder.mainTextView.setCompoundDrawablesRelativeWithIntrinsicBounds(context.getDrawable(R.drawable.ic_miui_arrow_empty), null, null, null);
-        holder.mainTextView.setTextColor(context.getColor(R.color.title));
+        holder.mainTextView.setTextColor(context.getResources().getColor(R.color.title));
         if (selector == position) {
-            Drawable drawable = context.getDrawable(R.drawable.ic_miui_arrow_right);
+            Drawable drawable = context.getResources().getDrawable(R.drawable.ic_miui_arrow_right);
             if (MiuiDialogHelper.get().getListArrow() != 0) {
-                drawable = context.getDrawable(MiuiDialogHelper.get().getListArrow());
+                drawable = context.getResources().getDrawable(MiuiDialogHelper.get().getListArrow());
             }
             holder.mainTextView.setCompoundDrawablesRelativeWithIntrinsicBounds(drawable, null, null, null);
-            holder.mainTextView.setTextColor(context.getColor(R.color.blue));
+            holder.mainTextView.setTextColor(context.getResources().getColor(R.color.blue));
             if (MiuiDialogHelper.get().getAccentColor() != 0) {
-                holder.mainTextView.setTextColor(context.getColor(MiuiDialogHelper.get().getAccentColor()));
+                holder.mainTextView.setTextColor(context.getResources().getColor(MiuiDialogHelper.get().getAccentColor()));
             }
         }
         holder.mainTextView.setText(content);

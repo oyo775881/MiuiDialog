@@ -17,7 +17,8 @@
         android:gravity="center"
         android:padding="16dp"
         android:textColor="@color/title"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <View
         android:layout_width="match_parent"
@@ -44,6 +45,7 @@
         android:background="@drawable/selector_dialog_opera"
         android:gravity="center"
         android:textColor="@color/content"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
